@@ -8,7 +8,7 @@ html, body {
 
 #body-wrap {
   height: 100%;
-  weight: 100%;
+  width: 100%;
   background-color: rgb(239, 217, 206);
   display: flex;
   flex-direction: column;
@@ -75,4 +75,79 @@ footer {
 #chart th.name-heading {
   font-weight: bold;
   text-align: center;
+}
+
+/* media query for mobile devices */
+
+@media only screen and (max-width: 400px) {
+  #body-wrap {
+    height: fit-content;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  #chart {
+    height: fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  #chart table {
+    width: 90vw;
+    background-color: #FAF3F0;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+  }
+
+  nav {
+    height: 2em;
+    width: 100vw;
+  }
+
+  footer {
+    height: 2em;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  #body-wrap {
+    height: 100vh;
+    width: fit-content;
+    overflow: hidden;
+  }
+
+  #chart {
+    height: fit-content;
+    width: 100vw;
+    border-radius: 5px;
+    padding: 0 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+  }
+
+  #chart table {
+    height: fit-content;
+    background-color: #FAF3F0;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+  }
+
+  nav {
+    height: 2em;
+    width: 100%;
+  }
+
+  footer {
+    height: 2em;
+    width: 100%;
+  }
 }
