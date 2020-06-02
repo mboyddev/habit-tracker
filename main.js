@@ -1,4 +1,4 @@
-
+let resetBtn = document.getElementById('reset-btn');
 let boxes = document.querySelectorAll('input[type=checkbox');
 let boxCount = JSON.parse(localStorage.getItem('boxCount'));
 let pastSession = (boxCount > 1);
@@ -34,6 +34,13 @@ if(pastSession) {
         localStorage.setItem('boxCount', JSON.stringify(boxCount));
     });
 }
+
+resetBtn.addEventListener('click', () => {
+    if(confirm("Are you sure you want to delete your data?")) {
+        localStorage.clear();
+        location.reload();
+    }
+});
 
 
 

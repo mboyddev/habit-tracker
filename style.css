@@ -41,10 +41,11 @@ footer {
 }
 
 #chart {
-  height: 50%;
+  height: fit-content;
   border-radius: 5px;
-  padding: 1em;
+  padding: 2em;
   display: flex;
+  position: relative;
 }
 
 #chart table {
@@ -75,6 +76,13 @@ footer {
 #chart th.name-heading {
   font-weight: bold;
   text-align: center;
+}
+
+#reset-btn {
+  display: inline;
+  position: absolute;
+  right: 3.5em;
+  bottom: 0.5em;
 }
 
 /* media query for mobile devices */
