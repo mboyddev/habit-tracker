@@ -114,9 +114,10 @@ footer {
   display: none;
 }
 
-/* media query for mobile devices */
+/* media queries for mobile devices */
 
-@media only screen and (max-width: 400px) {
+/* PORTRAIT MODE */
+@media only screen and (max-width: 500px) {
   #body-wrap {
     height: fit-content;
     width: 100vw;
@@ -146,13 +147,18 @@ footer {
     width: 100vw;
   }
 
+  nav > a {
+    padding-right: 2em;
+  }
+
   footer {
     height: 2em;
     width: 100%;
   }
 }
 
-@media only screen and (max-height: 400px) {
+/* LANDSCAPE MODE */
+@media only screen and (max-height: 500px) {
   #body-wrap {
     height: 100vh;
     width: fit-content;
@@ -163,7 +169,7 @@ footer {
     height: fit-content;
     width: 100vw;
     border-radius: 5px;
-    padding: 0 0.5em;
+    padding: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -179,15 +185,16 @@ footer {
   }
 
   #reset-btn {
-    display: inline-block;
-    position: fixed;
-    bottom: 3em;
-    left: 48%;
+    bottom: 0;
   }
 
   nav {
     height: 2em;
     width: 100%;
+  }
+
+  nav > a {
+    padding-right: 3em;
   }
 
   footer {
@@ -195,83 +202,3 @@ footer {
     width: 100%;
   }
 }
-
-/* @media only screen and (max-width: 800px) {
-  #body-wrap {
-    height: fit-content;
-    width: 100vw;
-    overflow: hidden;
-  }
-  
-  #chart {
-    height: fit-content;
-    width: fit-content;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
-  }
-
-  #chart table {
-    width: 90vw;
-    background-color: #FAF3F0;
-    padding: 1em;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-  }
-
-  nav {
-    height: 2em;
-    width: 100vw;
-  }
-
-  footer {
-    height: 2em;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-height: 800px) {
-  #body-wrap {
-    height: 100vh;
-    width: fit-content;
-    overflow: hidden;
-  }
-
-  #chart {
-    height: fit-content;
-    width: 100vw;
-    border-radius: 5px;
-    padding: 0 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: auto;
-  }
-
-  #chart table {
-    height: fit-content;
-    background-color: #FAF3F0;
-    padding: 1em;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-  }
-
-  #reset-btn {
-    display: inline-block;
-    position: fixed;
-    bottom: 3.5em;
-    right: 2em;
-  }
-
-  nav {
-    height: 2em;
-    width: 100%;
-  }
-
-  footer {
-    height: 2em;
-    width: 100%;
-  }
-} */
